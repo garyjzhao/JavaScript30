@@ -46,6 +46,13 @@
       .hl {
         color: var(--base);
       }
+
+      img {
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+      }
+
       /*
       misc styles, nothing to do with CSS variables
     */
@@ -68,6 +75,24 @@
       }
     </style>
 
-    <script></script>
+    <script>
+      // get the inputs
+      const inputs = document.querySelectorAll(".controls input");
+
+      // handle the change
+      function handleChange() {
+        const suffix = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+
+      // add listener
+      inputs.forEach(input => input.addEventListener("change", handleChange));
+      inputs.forEach(input =>
+        input.addEventListener("mousemove", handleChange)
+      );
+    </script>
   </body>
 </html>
