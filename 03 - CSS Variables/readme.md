@@ -10,3 +10,4 @@
   - `setProperty` ==> sets the property. Takes two arguments
 - `this.dataset`
   - `this.dataset` retrieves all the data attributes on the element
+- after much playing around, I cannot seem to get `handleChange()` to use arrow functions instead... :/
