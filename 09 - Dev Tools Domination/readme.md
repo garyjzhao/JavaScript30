@@ -29,4 +29,4 @@
       console.groupEnd(`${dog.name}`);
     });
     ```
-    - note: `console.groupCollapsed(`\${dog.name}`);` has to have the same string as `console.groupEnd(`\${dog.name}`
+    - note: `console.groupCollapsed(${dog.name});` has to have the same string as`console.groupEnd(${dog.name}`.
